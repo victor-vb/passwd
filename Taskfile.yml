@@ -5,11 +5,14 @@ version: '3'
 tasks:
   default:
     cmds:
-      - cd chrome && npm install && npm run build
+      - cd chrome && npm run build
+      - cargo fmt
       - cargo build -r
       - cargo run -r -- -f ./passwd service -l ./passwd.log
-    silent: true
-  dev:
+  install:
+    cmds:
+      - cd chrome && npm install
+  service:
     cmds:
       - cargo run -- -f ./passwd start-server -p 8084
   encode:

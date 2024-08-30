@@ -1,0 +1,20 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - cd chrome && npm install && npm run build
+      - cargo build -r
+      - cargo run -r -- -f ./passwd service -l ./passwd.log
+    silent: true
+  dev:
+    cmds:
+      - cargo run -- -f ./passwd start-server -p 8084
+  encode:
+    cmds:
+      - cargo run -- -f ./passwd encode
+  decode:
+    cmds:
+      - cargo run -- -f ./passwd decode

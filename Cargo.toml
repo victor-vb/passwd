@@ -1,0 +1,5 @@
+[workspace]
+members = ["wdbox"]
+resolver = "2"
+
+default-members = ["wdbox"]

@@ -1,0 +1,24 @@
+[package]
+name = "wdbox"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix = "0.13.0"
+actix-web = "4.3.1"
+actix-web-actors = "4.2.0"
+env_logger = "0.8"
+log = "0.4"
+clap = {version = "4.4.2",features = ["derive"]}
+regex = "1.9.5"
+google-authenticator = "0.4.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.105"
+aes="0.7.5"
+hex="0.4.3"
+block-modes="0.8.1"
+base64 = "0.21.3"
+chrono = "0.4.30"
+tokio = {version = "1.39.2",features = ["rt"]}

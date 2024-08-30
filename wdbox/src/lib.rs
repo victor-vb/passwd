@@ -49,7 +49,7 @@ impl Passwd {
 pub enum Commands {
     Decode,
     Encode,
-    
+
     Service {
         #[arg(short = 'l', long, default_value = "", help = "日志保存路径")]
         log_path: String,
@@ -317,13 +317,13 @@ impl Passwd {
         let mut log_file = Path::new(&log_file).to_owned();
         if !log_file.exists() {
             let _ = fs::create_dir_all(log_file.parent().ok_or("无法获取日志路径")?);
-            File::create(&log_file).map_err(|e|e.to_string())?;
+            File::create(&log_file).map_err(|e| e.to_string())?;
         }
-     
+
         if !log_file.is_absolute() {
             log_file = std::fs::canonicalize(log_file).map_err(|e| e.to_string())?;
         }
-    
+
         info!("log path:{:?}", log_file);
         let mut passwd_file = self.file.clone();
         let path = passwd_file.as_path();
@@ -409,7 +409,7 @@ mod test {
         assert!(result.is_ok());
         let home_path = result.unwrap();
         let filepath = "";
-        assert!(!filepath.is_empty(),"请设置相关密码文件路径进行测试！");
+        assert!(!filepath.is_empty(), "请设置相关密码文件路径进行测试！");
         let file = PathBuf::from(home_path).join("");
         let cli = Passwd::new(file);
         cli

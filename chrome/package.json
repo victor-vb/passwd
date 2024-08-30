@@ -1,0 +1,22 @@
+{
+  "name": "sidepanel",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "aes": "^0.1.0",
+    "bootstrap": "^5.3.3",
+    "chrome-types": "^0.1.290",
+    "cryptojs": "^2.5.3",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "vite": "^5.3.1"
+  }
+}

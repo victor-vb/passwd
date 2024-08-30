@@ -1,0 +1,52 @@
+#password_list ::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+#password_list {
+    display: none;
+    width: 180px;
+    position: absolute;
+    z-index: 10000;
+}
+
+#password_list span{
+    display: block;
+    position:static;
+    cursor: pointer;
+    padding: 5px;
+    width: 150px;
+    height: 38px;
+    line-height: 24px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px white solid;
+    border-radius: 3px;
+}
+#password_list .antiquewhite{
+    background-color: antiquewhite;
+}
+
+#toast_message{
+    text-align: center;
+    line-height: 28px;
+    animation-duration: 2s;
+    display: block;
+    width: 250px;
+    height: 48px;
+    padding: 10px;
+    border-radius: 3px;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10000000;
+    background-color: red;
+    font-weight: 9000;
+}
+
+.row{
+    margin-top: 5px;
+}

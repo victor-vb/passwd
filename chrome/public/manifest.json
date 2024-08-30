@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Manager passwd",
+    "description": "manager your password",
+    "version": "1.0",
+    "icons": {
+
+    },
+    "action": {
+        "default_title": "Click to open panel"
+    },
+    "permissions": [
+        "sidePanel"
+    ],
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "assets/index.css"
+            ],
+            "js": [
+                "front.js"
+            ],
+            "matches": [
+                "*://*/*"
+            ],
+            "run_at":"document_end"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_security_policy": {
+        "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+    }
+}
